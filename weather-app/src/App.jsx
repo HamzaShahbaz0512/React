@@ -6,7 +6,8 @@ function App() {
   const [weather, setWeather]=useState(null)
   function setWeatherData(data)
   {
-   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=apiKey`)
+   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${data}&appid=apikey`)
+   //api key 
    .then(res=>res.json()) //it check if there is any error
    .then(data=>setWeather(data)) //it performs the actual logic of the data
   }
